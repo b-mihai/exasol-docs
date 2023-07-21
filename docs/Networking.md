@@ -1,5 +1,47 @@
 # Networking
 
+## IP LINK
+# Set interface state to 'down'
+```
+ip link set dev {intf_name} down
+```
+# Set interface state to 'up'
+```
+ip link set dev {intf_name} up
+```
+# Rename an interface
+```
+ip link set {OLD_intf_name} name {NEW_intf_name}
+```
+# Change the active slave on an active-backup bond
+```
+ip link set dev {bond_name} type bond active_slave {intf_name}
+```
+
+## BONDS
+### Create an active-backup bond interface
+```
+ip link add name bond0 type bond mode active-backup
+ip link set master bond0 dev eth1
+ip link set master bond0 dev eth0
+ip link set up dev bond0
+ip address add 192.168.100.1/24 dev bond0
+```
+### Check detailed info and statistics of bond0
+```
+ip -s -s -d link ls dev bond0
+```
+### Check the state of ALL under-laying interfaces
+```
+ip -s -s -d link ls master bond0
+```
+
+## IFTOP
+### Monitor the network traffic to a specific destination address
+```
+iftop -i {intf_name} -F {ip_address/24} -B
+```
+
 ## Use OMNI calculator if needed
 https://www.omnicalculator.com/other/bandwidth
 
