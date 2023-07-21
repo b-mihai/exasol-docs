@@ -1,98 +1,107 @@
 # Storage
 
-# Print summary of volume information
+## CSINFO
+Print summary of volume information
 ```
 csinfo
 ```
-# Print all volume information
+Print all volume information
 ```
 csinfo -v
 ```
-# Print volume information for a specific vol. id
+Print volume information for a specific vol. id
 ```
 csinfo -v -i {vol_id}
 ```
-# Print volume segment information
+Print volume segment information
 ```
 csinfo -v -i {vol_id} -l2
 ```
-# Show HDD state
+Show HDD state
 ```
 csinfo -H
 ```
-# Show HDD state
+Show HDD state
 ```
 csinfo -H
 ```
-# Print HDD info
+Print HDD info
 ```
 csinfo -D
 ```
-# List the backup files in remote archive volume
+
+## SDFS
+List contents of the remote archive volume
 ```
 sdfs list {vol_id}
 ```
-# Add one or more files to the volume
+Add one or more files to the volume
 ```
 sdfs add {vol_id} {exp_date} {file}
 ```
-# Add data from stdin as new file to SDFS
+Add data from stdin as new file to SDFS
 ```
 sdfs addraw {vol_id} {exp_date} {file}
 ``` 
-# Remove file(s) from volume (or only mark as deleted if there is enough space)
+Remove file(s) from volume (or only mark as deleted if there is enough space)
 ```
 sdfs remove {vol_id} -r {file}
 ```
-# Stop storage services
+
+## CSCTRL
+Stop storage services
 ```
 csctrl -d
 ```
-# Suspend storage
+Suspend storage
 ```
 csctrl -u
 ```
-# Start storage services on NGA
+Start storage services on NGA
 ```
 csctrl -s -A -R -n 11,12 -c /exa/etc/cos_storage.conf
 ```
-# Start storage services on non-NGA
+Start storage services on non-NGA
 ```
 csctrl -s -A -R -n 11,12 -c /usr/opt/EXASuite-7/EXAClusterOS-7.1.21/etc/cos_storage.conf
 ```
-# Drop/delete a volume
+
+## CSVOL
+Drop/delete a volume
 ```
 csvol -d -v {vol_id}
 ```
-# Create a volume with specific attributes
+Create a volume with specific attributes
 ```
 csvol -c -s 7 -b 4 -S 256 -r 1 -h disk1 -p rwx------ -m 5 -C -H -P 10 -B VERTICAL
 ```
-# Rename a volume
+Rename a volume
 ```
 csvol -v 0 -y -I {vol_name}
 ```
-# Set disk permissions to specific user
+Set disk permissions to specific user
 ```
 csvol -v 0 -O -U {user} -G {group}
 ```
-# Lock a volume
+Lock a volume
 ```
 csvol -l -v {vol_id}
 ```
-# Unlock a volume
+Unlock a volume
 ```
 csvol -L -v {vol_id}
 ```
-# View the storage recovery process
+
+## CSREC, CSHDD, CSTOP
+View the storage recovery process
 ```
 csrec -s -v {vol_id}
 ```
-# Enable an OFFLINE disk
+Enable an OFFLINE disk
 ```
 cshdd -e -h /dev/mapper/... -n 11
 ```
-# Monitor cluster performance
+Monitor cluster performance
 ```
 cstop
 ```
