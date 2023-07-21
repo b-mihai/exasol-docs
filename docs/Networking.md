@@ -24,7 +24,10 @@ Create a dummy file and the connection from 'source' server
 ```
 dd if=/dev/zero bs=1M count=1024 | nc {dest_ip} 60000
 ```
-### 'Watch' if a port is listening
+## Check if a port is listening 
+### Using 'nc'
 ```
 watch nc -zv {ip} {port}
 ```
+### Using 'ss'
+ss -antp | grep {port}
