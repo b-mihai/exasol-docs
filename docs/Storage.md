@@ -47,6 +47,14 @@ Remove file(s) from volume (or only mark as deleted if there is enough space)
 ```
 sdfs remove {vol_id} -r {file}
 ```
+Copy a file between archive volumes
+```
+sdfs getraw (vol_id} {file} | sdfs addraw {vol_id} {exp_date} {file}
+```
+Copy a file between archive volumes
+```
+sdfs rename (vol_id} {old_file_name} {new_file_name}
+```
 
 ## CSCTRL
 Stop storage services
