@@ -4,6 +4,7 @@
 https://www.omnicalculator.com/other/bandwidth
 
 ## IPERF3
+###  Test network connection speed with 'iperf3'
 Start `iperf` on 'destination' server
 ```
 iperf3 -s -p 60000
@@ -14,13 +15,16 @@ iperf3 -c {dest_ip} -p 60000
 ```
 
 ## NCAT
-### Start `ncat` on 'destination' server
+### Test network connection speed with 'ncat'
+Start `ncat` on 'destination' server
 ```
 nc -l 60000
 ```
-### Create a dummy file and the connection from 'source' server
+Create a dummy file and the connection from 'source' server
 ```
 dd if=/dev/zero bs=1M count=1024 | nc {dest_ip} 60000
 ```
-
-### 
+### 'Watch' if a port is listening
+```
+watch nc -zv {ip} {port}
+```
