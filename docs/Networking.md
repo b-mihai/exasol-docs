@@ -4,10 +4,12 @@
 Set interface state to 'down'
 ```
 ip link set dev {intf_name} down
+ifconfig {intf_name} down
 ```
 Set interface state to 'up'
 ```
 ip link set dev {intf_name} up
+ifconfig {intf_name} up
 ```
 Rename an interface
 ```
