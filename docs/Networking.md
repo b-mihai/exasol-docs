@@ -41,7 +41,7 @@ ip -s -s -d link ls master bond0
 ## IFTOP
 Monitor the network traffic to a specific destination address
 ```
-iftop -n -i {intf_name} -f "host {ip_address}"
+iftop -n -i {intf_name} -f "dst host {ip_address}"
 ```
 
 ## Use OMNI calculator if needed
