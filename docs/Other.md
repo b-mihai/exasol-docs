@@ -1,7 +1,8 @@
-# OTHER
+# Other
 
 ## DMIDECODE
 Print various system information
+```
 Valid type keywords:
   bios
   system
@@ -12,12 +13,13 @@ Valid type keywords:
   cache
   connector
   slot
-```
+
 dmidecode -t system
 dmidecode -t bios
 dmidecode -t memory
 ```
 Check if system is barebone/physical or virtualized
+```
 Valid strings keywords:
   bios-vendor
   bios-version
@@ -42,10 +44,9 @@ Valid strings keywords:
   processor-manufacturer
   processor-version
   processor-frequency
-```
+
 dmidecode -s system-manufacturer
 dmidecode -s processor-frequency
-
 ```
 
 ## PROC
