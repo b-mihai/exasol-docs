@@ -68,3 +68,17 @@ cat /proc/cpuinfo
 3. While still selecting “SWAP” press the [right] arrow key, which highlights the entire SWAP line, and using the [top] arrow key move it up to one of the first options (anywhere above “COMMAND”).
 4. While still having “SWAP” selected, type the “s” key which will configure top to SORT by the currently selected option, in this case, SWAP. You will not see any changes on the screen when you press “s”, but the setting is saved in the backend.
 5. Finally “q” to save the configuration changes and view the results.
+
+## TAR
+Open a log file (without extracting) from tar.gz archive
+```
+tar -Oxvf filename.tar.gz /path/to/file.log | less
+```
+View contents of a tar.gz archive
+```
+tar -tf filename.tar.gz | less
+```
+Extract just one file from a tar.gz archive
+```
+tar -zxvf filename.tar.gz  /path/to/file_name
+```
