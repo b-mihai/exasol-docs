@@ -82,3 +82,7 @@ Extract just one file from a tar.gz archive
 ```
 tar -zxvf filename.tar.gz  /path/to/file_name
 ```
+Extract tar.gz files creating a directory with the same name as the archive and excluding the Sql Sessions and Server logs
+```
+find . -name "*.tar.gz" -execdir tar --exclude='*Sql*' --one-top-level -xvzf {} \;
+```
