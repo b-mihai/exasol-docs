@@ -2,7 +2,7 @@
 
 ## Ping HOSTS
 Ping hosts from /etc/hosts
-```
+``` bash
 #!/bin/bash
 
 # Path to the hosts file
@@ -32,7 +32,7 @@ echo "Ping process completed."
 ```
 ## Ping IP
 Ping IPs from file
-```
+``` bash
 #!/bin/bash
 
 # Path to the source file containing IP addresses (one per line)
@@ -62,7 +62,7 @@ echo "Ping process completed."
 ```
 ## SWAP
 Check SWAP usage
-```
+``` bash
 #!/bin/bash
 
     # find-out-what-is-using-your-swap.sh
