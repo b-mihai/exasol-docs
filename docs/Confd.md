@@ -56,3 +56,7 @@ Restore a database
 ```
 confd_client -c db_restore -a '{backup_id: 1 exa_db/id_1/level_0/node_0/backup_201811131114 exa_db, db_name: exasol, restore_type: blocking}'
 ```
+Upload a new license
+```
+cat <license_file> | confd_client license_upload license: "\"{< -}\""```
+```
