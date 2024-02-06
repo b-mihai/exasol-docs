@@ -26,7 +26,7 @@ confd_client -c db_configure -a '{db_name: exasol, params:"-forceProtocolEncrypt
 ```
 Add a remote volume (AWS)
 ```
-confd_client -c remote_volume_add -a '{"vol_type":"s3","url":"https://nc-testbucket.s3.amazonaws.com","username":"USWIN\\SVC-SCRE_EXA_BKP","password": "base64_encoded", "owner": [500,500], "options":["timeout=6000,cleanvolume"]}'
+confd_client -c remote_volume_add -a '{url: https://bomi-v8.s3.us-east-1.amazonaws.com, vol_type: s3, username: AKIAS........A5Q, password: +CrRV2...........DQJrStUDHZ, owner: [500,500]}'
 ```
 Add a remote volume (SMB)
 ```
