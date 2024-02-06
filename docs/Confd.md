@@ -42,7 +42,8 @@ confd_client -c db_backup_list -a 'db_name: exasol'
 ```
 Create an archive volume with specific characteristics
 ```
-confd_client -c st_volume_create -a '{"disk":"disk1","nodes":[11],"redundancy":1,"size":"100 MiB","type":"archive","owner":[500, 500],"name":"test_archive"}'
+confd_client st_volume_create -a '{"disk":"disk1","nodes":[11],"redundancy":1,"size":"100 MiB","type":"archive","owner":[500, 500],"name":"test_archive"}'
+confd_client st_volume_create -a '{"disk":"disk1","nodes":[11,12,13,14],"redundancy":2,"size":"8 GiB","type":"archive","owner":[500, 500],"name":"archive"}'
 ```
 Delete a volume
 ```
