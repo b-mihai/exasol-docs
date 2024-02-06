@@ -58,5 +58,5 @@ confd_client -c db_restore -a '{backup_id: 1 exa_db/id_1/level_0/node_0/backup_2
 ```
 Upload a new license
 ```
-cat <license_file> | confd_client license_upload license: "\"{< -}\""```
+cat <license_file> | confd_client license_upload license: "\"{< -}\""
 ```
