@@ -86,3 +86,8 @@ Extract tar.gz files creating a directory with the same name as the archive and 
 ```
 find . -name "*.tar.gz" -execdir tar --exclude='*Sql*' --one-top-level -xvzf {} \;
 ```
+Forward port
+```
+ssh -L{local_port}:{remote_IP}:{remote_port} {via_host}
+example: ssh -L8443:10.30.31.54:443 jumphost
+```
