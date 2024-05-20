@@ -91,3 +91,10 @@ Forward port
 ssh -L{local_port}:{remote_IP}:{remote_port} {via_host}
 example: ssh -L8443:10.30.31.54:443 jumphost
 ```
+Route traffic via a jumphost
+```
+ssh -vv -ND 8888 user@yourserver
+```
+In `firefox`, go to Preferences -> Advanced -> Network -> Connection: Settings.
+Select Manual proxy configuration and add a `SOCKS v5` proxy:
+SOCKS Host:   localhost    Port 8080
