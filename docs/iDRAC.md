@@ -19,6 +19,10 @@ ipmitool -I lanplus -U {user} -P {pass} -H {idrac_IP} chassis power status
 ```
 
 ## RACADM
+Reset - This reboots the iDRAC without changing any iDRAC configuration settings.
+```
+racadm racreset
+```
 Get the System Event Log
 ```
 racadm getsel
