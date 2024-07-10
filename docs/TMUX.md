@@ -57,3 +57,5 @@ Equal Vertical Distribution: `select-layout even-vertical`
 
 For more interactive resizing without entering command mode:
 Resize Mode: Press `Ctrl+b followed by :`, then type `resize-pane -m` to enter resize mode. After this, you can use the arrow keys to resize the active pane. Press `Enter` to exit resize mode.
+
+Type in all panes at the same time `setw synchronize-panes on`
