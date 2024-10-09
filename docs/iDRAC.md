@@ -59,3 +59,7 @@ Get Power profile from BIOS
 ```
 racadm get BIOS.SysProfileSettings
 ```
+Rollback an iDRAC firmware update
+```
+racadm rollback iDRAC.Embedded.1-1
+```
